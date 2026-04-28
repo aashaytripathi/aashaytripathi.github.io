@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Aashay Tripathi — PhD Candidate in Economics, University of Calgary</title>
+<meta name="description" content="Aashay Tripathi is a PhD Candidate in Economics at the University of Calgary, working on development and political economy with a focus on indigenous communities in India." />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Aashay Tripathi — Economics, University of Calgary" />
+<meta property="og:description" content="PhD Candidate in Economics. Development and political economy; indigenous communities in India." />
+<meta property="og:type" content="website" />
+
+<!-- Favicon (emoji) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<style>
+:root {
+  --bg: #f7f3ec;
+  --bg-soft: #efe8dc;
+  --ink: #1a1f2e;
+  --ink-soft: #4a4f5e;
+  --muted: #7a7468;
+  --rule: #d4cdc1;
+  --accent: #7a1f2b;       /* deep burgundy */
+  --accent-soft: #a04050;
+  --highlight: #f0e8d6;    /* cream highlight for JMP block */
+
+  --serif: 'EB Garamond', 'Iowan Old Style', Georgia, serif;
+  --sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --mono: 'IBM Plex Mono', 'SF Mono', Consolas, monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Subtle paper texture using SVG noise */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.4;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.1 0 0 0 0 0.18 0 0 0 0.04 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+main, header, nav { position: relative; z-index: 1; }
+
+/* -------------- Navigation -------------- */
+.topbar {
+  border-bottom: 1px solid var(--rule);
+  background: rgba(247, 243, 236, 0.92);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.topbar-inner {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 14px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.topbar-name {
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+  text-decoration: none;
+}
+.topbar-name em { font-style: italic; color: var(--accent); }
+.topbar-nav {
+  display: flex;
+  gap: 22px;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+.topbar-nav a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.topbar-nav a:hover { color: var(--accent); }
+
+/* -------------- Container -------------- */
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* -------------- Hero / Header -------------- */
+.hero {
+  padding: 80px 0 60px;
+  border-bottom: 1px solid var(--rule);
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 36px;
+  align-items: start;
+}
+.hero-photo {
+  width: 160px;
+  height: 200px;
+  background: var(--bg-soft);
+  border: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--serif);
+  font-size: 13px;
+  font-style: italic;
+  color: var(--muted);
+  text-align: center;
+  padding: 12px;
+  overflow: hidden;
+}
+.hero-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.hero-name {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(2.4rem, 5vw, 3.4rem);
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  margin-bottom: 6px;
+  color: var(--ink);
+}
+.hero-title {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--ink-soft);
+  margin-bottom: 4px;
+}
+.hero-affiliation {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  margin-bottom: 18px;
+}
+.hero-jm-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 4px 10px;
+  margin-bottom: 22px;
+}
+.hero-bio {
+  font-family: var(--serif);
+  font-size: 1.12rem;
+  line-height: 1.65;
+  color: var(--ink);
+}
+.hero-bio em { color: var(--accent); font-style: italic; }
+
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 22px;
+  font-family: var(--sans);
+  font-size: 14px;
+}
+.hero-meta a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 1px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.hero-meta a:hover { color: var(--accent); border-color: var(--accent); }
+
+/* -------------- Sections -------------- */
+section {
+  padding: 56px 0;
+  border-bottom: 1px solid var(--rule);
+}
+section:last-of-type { border-bottom: none; }
+
+.section-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 24px;
+  display: block;
+}
+h2 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin-bottom: 28px;
+  color: var(--ink);
+}
+h2 em { color: var(--accent); font-style: italic; }
+
+/* -------------- About -------------- */
+.about-text p {
+  font-family: var(--serif);
+  font-size: 1.12rem;
+  line-height: 1.7;
+  margin-bottom: 18px;
+  color: var(--ink);
+}
+.about-text p:last-child { margin-bottom: 0; }
+
+/* -------------- JMP block (the centerpiece) -------------- */
+.jmp {
+  background: var(--highlight);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--accent);
+  padding: 36px 40px;
+  margin-top: 8px;
+}
+.jmp-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 14px;
+  display: block;
+}
+.jmp-title {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  margin-bottom: 14px;
+  color: var(--ink);
+}
+.jmp-meta {
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 18px;
+  font-style: italic;
+}
+.jmp-abstract {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--ink);
+  margin-bottom: 22px;
+}
+.jmp-actions {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  font-family: var(--sans);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.jmp-actions a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 2px;
+  transition: opacity 0.15s ease;
+}
+.jmp-actions a:hover { opacity: 0.7; }
+
+/* -------------- Paper list -------------- */
+.papers { list-style: none; }
+.paper {
+  padding: 26px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.paper:last-child { border-bottom: none; }
+.paper:first-child { padding-top: 0; }
+
+.paper-title {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.3;
+  margin-bottom: 6px;
+  color: var(--ink);
+}
+.paper-meta {
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 12px;
+}
+.paper-abstract {
+  font-family: var(--serif);
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  margin-bottom: 12px;
+}
+.paper-links {
+  display: flex;
+  gap: 16px;
+  font-family: var(--sans);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.paper-links a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+  transition: border-color 0.15s ease;
+}
+.paper-links a:hover { border-color: var(--accent); }
+
+/* -------------- Teaching / Awards -------------- */
+.list {
+  list-style: none;
+}
+.list li {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--rule);
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 24px;
+  align-items: baseline;
+}
+.list li:last-child { border-bottom: none; }
+.list-year {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+}
+.list-content {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  color: var(--ink);
+}
+.list-content .sub {
+  display: block;
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--muted);
+  font-style: italic;
+  margin-top: 2px;
+}
+
+/* -------------- Contact -------------- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 32px;
+  font-family: var(--serif);
+  font-size: 1.05rem;
+}
+.contact-grid div span {
+  display: block;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+.contact-grid a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 1px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.contact-grid a:hover { color: var(--accent); border-color: var(--accent); }
+
+/* -------------- References (job market) -------------- */
+.references {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 8px;
+}
+.ref-card {
+  font-family: var(--serif);
+}
+.ref-name {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 2px;
+}
+.ref-role {
+  font-family: var(--sans);
+  font-size: 12px;
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* -------------- Footer -------------- */
+footer {
+  padding: 40px 0 60px;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+footer a { color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--rule); }
+
+/* -------------- Subtle entrance animation -------------- */
+@keyframes rise {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-name, .hero-title, .hero-affiliation, .hero-jm-badge, .hero-bio, .hero-meta, .hero-photo {
+  animation: rise 0.8s ease-out backwards;
+}
+.hero-name { animation-delay: 0.05s; }
+.hero-title { animation-delay: 0.15s; }
+.hero-affiliation { animation-delay: 0.20s; }
+.hero-jm-badge { animation-delay: 0.25s; }
+.hero-bio { animation-delay: 0.30s; }
+.hero-meta { animation-delay: 0.40s; }
+.hero-photo { animation-delay: 0.10s; }
+
+/* -------------- Mobile -------------- */
+@media (max-width: 640px) {
+  .topbar-inner { padding: 12px 22px; }
+  .topbar-nav { gap: 14px; font-size: 11px; }
+  .container { padding: 0 22px; }
+  .hero { padding: 50px 0 40px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 24px; }
+  .hero-photo { width: 130px; height: 162px; }
+  section { padding: 40px 0; }
+  h2 { font-size: 1.6rem; }
+  .jmp { padding: 26px 22px; }
+  .jmp-title { font-size: 1.25rem; }
+  .list li { grid-template-columns: 1fr; gap: 4px; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .references { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+
+<body>
+
+<nav class="topbar">
+  <div class="topbar-inner">
+    <a href="#top" class="topbar-name">Aashay <em>Tripathi</em></a>
+    <div class="topbar-nav">
+      <a href="#research">Research</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#cv">CV</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+
+<!-- ============== HERO ============== -->
+<header class="hero">
+  <div class="container">
+    <div class="hero-grid">
+
+      <div class="hero-photo">
+        <!-- Replace src with your photo URL once hosted -->
+        <!-- <img src="photo.jpg" alt="Aashay Tripathi" /> -->
+        Photo
+      </div>
+
+      <div>
+        <h1 class="hero-name">Aashay Tripathi</h1>
+        <p class="hero-title">PhD Candidate in Economics</p>
+        <p class="hero-affiliation">University of Calgary</p>
+
+        <span class="hero-jm-badge">On the 2025–26 Job Market</span>
+
+        <p class="hero-bio">
+          I am a development economist working at the intersection of <em>political economy</em>
+          and <em>impact evaluation</em>. My research uses quasi-experimental methods to
+          study how public policy shapes the lives of indigenous and marginalized
+          communities in India — with a particular focus on education, conflict, and
+          intra-household decision-making.
+        </p>
+
+        <div class="hero-meta">
+          <a href="#cv">Curriculum Vitae</a>
+          <a href="mailto:your.email@ucalgary.ca">Email</a>
+          <a href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a>
+          <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<!-- ============== ABOUT ============== -->
+<section id="about">
+  <div class="container">
+    <span class="section-label">About</span>
+    <div class="about-text">
+      <p>
+        I am a PhD candidate (ABD) in Economics at the University of Calgary, supervised by
+        Arvind Magesan, Benjamin Crost, and Sacha Kapoor. My research agenda centers on
+        causal evaluations of public policy in low- and middle-income settings, with
+        an emphasis on indigenous (Adivasi) populations in India.
+      </p>
+      <p>
+        Before beginning the PhD, I worked as a Research Analyst at Outline India and
+        Grail Research, conducting fieldwork on education, water and sanitation, and
+        public health across seven Indian states. That field experience continues to
+        shape both the questions I ask and how I think about data.
+      </p>
+      <p>
+        Methodologically, I rely on instrumental variables, difference-in-differences,
+        synthetic control, regression discontinuity, and event-study designs, working
+        primarily in Stata, Python, and GIS. A common thread across my projects is
+        the construction of original geocoded datasets that link administrative
+        records, survey microdata, and remote-sensing data.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============== JOB MARKET PAPER ============== -->
+<section id="research">
+  <div class="container">
+    <span class="section-label">Research</span>
+    <h2>Job Market <em>Paper</em></h2>
+
+    <div class="jmp">
+      <span class="jmp-label">Job Market Paper · 2025</span>
+      <h3 class="jmp-title">
+        The Impact of Residential Schools on Indigenous Educational Attainment:
+        Evidence from India
+      </h3>
+      <p class="jmp-meta">Solo-authored · Draft available on request</p>
+      <p class="jmp-abstract">
+        I estimate the causal effect of Eklavya Model Residential Schools (EMRS) — a
+        federal initiative providing free secondary education to scheduled-tribe students
+        in India — on educational attainment and earnings among school-eligible cohorts.
+        Combining a novel village-level dataset that merges EMRS sanction records with
+        NFHS, IHDS, and remote-sensing data, I exploit cohort eligibility and historical
+        forest cover as instruments for school exposure. Using district and state-by-year
+        fixed effects, I find that EMRS exposure raises years of schooling and shifts
+        long-run labor-market outcomes, with the largest gains concentrated among
+        first-generation learners. The results suggest that targeted residential
+        schooling can meaningfully narrow educational gaps for indigenous populations,
+        even in remote and conflict-affected districts.
+      </p>
+      <div class="jmp-actions">
+        <a href="#">Download PDF</a>
+        <a href="#">Slides</a>
+        <a href="#">BibTeX</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== WORKING PAPERS ============== -->
+<section id="working-papers">
+  <div class="container">
+    <span class="section-label">Working Papers</span>
+    <h2>Working <em>Papers</em></h2>
+
+    <ul class="papers">
+
+      <li class="paper">
+        <h3 class="paper-title">
+          Public Employment and Political Violence: Evidence from NREGA
+        </h3>
+        <p class="paper-meta">Working paper · 2025</p>
+        <p class="paper-abstract">
+          Using the phased rollout of the National Rural Employment Guarantee Act
+          (NREGA) and close-election variation in district leadership, I evaluate
+          how guaranteed public employment affects insurgent violence in
+          conflict-affected regions of India. The design isolates the political-economy
+          channel from contemporaneous changes in local administrative capacity.
+        </p>
+        <div class="paper-links">
+          <a href="#">Draft</a>
+          <a href="#">Slides</a>
+        </div>
+      </li>
+
+      <li class="paper">
+        <h3 class="paper-title">
+          Cash Transfers, Fertility, and Girls' Education: Evidence from the
+          Bhagyalakshmi Scheme in Karnataka
+        </h3>
+        <p class="paper-meta">Working paper · In progress</p>
+        <p class="paper-abstract">
+          I evaluate Karnataka's Bhagyalakshmi conditional cash transfer, which
+          provides a long-maturity bond to families upon the birth of a girl child,
+          conditional on schooling and health milestones. Using an event-study
+          design around the program's introduction, I examine effects on fertility,
+          girls' educational attainment, and household decision-making.
+        </p>
+        <div class="paper-links">
+          <a href="#">Draft (request)</a>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+<!-- ============== TEACHING ============== -->
+<section id="teaching">
+  <div class="container">
+    <span class="section-label">Teaching</span>
+    <h2>Teaching <em>&amp; Mentoring</em></h2>
+
+    <ul class="list">
+      <li>
+        <span class="list-year">2024–25</span>
+        <div class="list-content">
+          Teaching Assistant, Intermediate Microeconomics II (ECON 357)
+          <span class="sub">University of Calgary · Tutorial design, problem sets, exam grading</span>
+        </div>
+      </li>
+      <li>
+        <span class="list-year">2023–24</span>
+        <div class="list-content">
+          Teaching Assistant, Multiple undergraduate sequences
+          <span class="sub">University of Calgary · Microeconomics, econometrics, development</span>
+        </div>
+      </li>
+      <li>
+        <span class="list-year">2022–23</span>
+        <div class="list-content">
+          PhD Teaching Assistant Excellence Prize
+          <span class="sub">Department of Economics, University of Calgary</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============== AWARDS ============== -->
+<section id="awards">
+  <div class="container">
+    <span class="section-label">Awards &amp; Honors</span>
+    <h2>Awards <em>&amp; Honors</em></h2>
+
+    <ul class="list">
+      <li>
+        <span class="list-year">2025</span>
+        <div class="list-content">
+          Two Canadian Economics Association Awards
+          <span class="sub">For research in development and political economy</span>
+        </div>
+      </li>
+      <li>
+        <span class="list-year">2022–23</span>
+        <div class="list-content">
+          PhD Teaching Assistant Excellence Prize
+          <span class="sub">University of Calgary</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============== CV ============== -->
+<section id="cv">
+  <div class="container">
+    <span class="section-label">Curriculum Vitae</span>
+    <h2>Curriculum <em>Vitae</em></h2>
+    <p style="font-family: var(--serif); font-size: 1.1rem; margin-bottom: 22px;">
+      A full PDF copy of my curriculum vitae is available below.
+    </p>
+    <p style="font-family: var(--sans); font-size: 13px; text-transform: uppercase; letter-spacing: 0.12em;">
+      <a href="cv.pdf" style="color: var(--accent); border-bottom: 1px solid var(--accent); padding-bottom: 2px; text-decoration: none;">
+        Download CV (PDF)
+      </a>
+    </p>
+  </div>
+</section>
+
+<!-- ============== REFERENCES ============== -->
+<section id="references">
+  <div class="container">
+    <span class="section-label">Job Market References</span>
+    <h2>References</h2>
+
+    <div class="references">
+      <div class="ref-card">
+        <div class="ref-name">Arvind Magesan</div>
+        <div class="ref-role">Associate Professor<br/>University of Calgary<br/>(Chair)</div>
+      </div>
+      <div class="ref-card">
+        <div class="ref-name">Benjamin Crost</div>
+        <div class="ref-role">Associate Professor<br/>University of Illinois<br/>Urbana-Champaign</div>
+      </div>
+      <div class="ref-card">
+        <div class="ref-name">Sacha Kapoor</div>
+        <div class="ref-role">Associate Professor<br/>Erasmus School of Economics</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== CONTACT ============== -->
+<section id="contact">
+  <div class="container">
+    <span class="section-label">Contact</span>
+    <h2>Get in <em>Touch</em></h2>
+
+    <div class="contact-grid">
+      <div>
+        <span>Email</span>
+        <a href="mailto:your.email@ucalgary.ca">your.email@ucalgary.ca</a>
+      </div>
+      <div>
+        <span>Office</span>
+        Department of Economics<br/>
+        Social Sciences Building<br/>
+        University of Calgary
+      </div>
+      <div>
+        <span>Google Scholar</span>
+        <a href="#" target="_blank" rel="noopener">scholar.google.com/…</a>
+      </div>
+      <div>
+        <span>GitHub</span>
+        <a href="#" target="_blank" rel="noopener">github.com/…</a>
+      </div>
+      <div>
+        <span>LinkedIn</span>
+        <a href="#" target="_blank" rel="noopener">linkedin.com/in/…</a>
+      </div>
+      <div>
+        <span>ORCID</span>
+        <a href="#" target="_blank" rel="noopener">orcid.org/…</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  © Aashay Tripathi · Last updated April 2026 · <a href="#top">Back to top</a>
+</footer>
+
+</body>
+</html>
