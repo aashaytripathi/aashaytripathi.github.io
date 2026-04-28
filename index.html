@@ -376,6 +376,80 @@ h2 em { color: var(--accent); font-style: italic; }
   margin-top: 2px;
 }
 
+/* -------------- Teaching section blocks -------------- */
+.teaching-prize {
+  font-family: var(--serif);
+  font-size: 1.02rem;
+  color: var(--ink);
+  padding: 12px 18px;
+  border-left: 2px solid var(--ink);
+  background: var(--bg-soft);
+  margin-bottom: 52px;
+}
+.teaching-prize strong { font-weight: 600; }
+
+.teaching-block { margin-bottom: 52px; }
+.teaching-block:last-child { margin-bottom: 0; }
+.teaching-block-title {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 24px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--rule);
+}
+.course-list {
+  list-style: none;
+  padding: 0 0 0 28px;
+  margin: 0;
+}
+.course-list li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
+  padding: 8px 0;
+  font-family: var(--serif);
+  font-size: 1.02rem;
+  color: var(--ink);
+  border-bottom: 1px dotted var(--rule);
+}
+.course-list li:last-child { border-bottom: none; }
+.course-list .course-term {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+.course-list-twocol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 36px;
+}
+@media (max-width: 640px) {
+  .course-list-twocol { grid-template-columns: 1fr; }
+}
+
+.teaching-dossier-link {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 10px 18px;
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.teaching-dossier-link:hover {
+  background: var(--ink);
+  color: var(--bg);
+}
+
 /* -------------- Contact -------------- */
 .contact-grid {
   display: grid;
@@ -521,10 +595,8 @@ em, i { font-style: normal; }                     /* no italic anywhere */
 
         <div class="hero-meta">
           <a href="#cv">Curriculum Vitae</a>
-          <a href="mailto:your.email@ucalgary.ca">Email</a>
-          <a href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a>
-          <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:aashay.tripathi1@ucalgary.ca">Email</a>
+          <a href="https://www.linkedin.com/in/aashay-tripathi-518b2874/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
 
@@ -541,7 +613,6 @@ em, i { font-style: normal; }                     /* no italic anywhere */
         As a development economist, I study how state institutions shape the lives of Indigenous and marginalized communities in India, focusing on education, 
         conflict, and intra-household decision-making. My job market paper is the first causal study of residential schools and Indigenous women's education in India.
         It received the EPDC Best Student Research Paper award and the Best Graduate Poster at the Canadian Economics Association in 2025. 
-       
       </p>
       <p>
         Before beginning my PhD, I led teams working on projects in education, water and sanitation, and health in the remote villages of India's Naxalite region. 
@@ -565,7 +636,7 @@ em, i { font-style: normal; }                     /* no italic anywhere */
     <div class="jmp">
       <span class="jmp-label">Job Market Paper · 2025</span>
       <h3 class="jmp-title">
-        Impact of Residential Schools on  Educational Attainment of Indigenous Women: Evidence from India
+        Impact of Residential Schools on Educational Attainment of Indigenous Women: Evidence from India
       </h3>
       <p class="jmp-meta"></p>
       <p class="jmp-abstract">
@@ -580,12 +651,9 @@ em, i { font-style: normal; }                     /* no italic anywhere */
         daughters' domestic labor, and dropout attributable to domestic work rises by 10 percentage points. 
         This, along with the phasing out of day-school options, indicates that a residential model can lower attainment for the intended beneficiaries
         when it overlooks the time constraints of socioeconomically marginalized households.
-
       </p>
       <div class="jmp-actions">
         <a href="https://drive.google.com/file/d/1kAdG8yB7xLIET1WlBr21viK_UdVYxMaD/view?usp=sharing">Download PDF</a>
-        <a href="#"></a>
-        <a href="#"></a>
       </div>
     </div>
   </div>
@@ -595,7 +663,7 @@ em, i { font-style: normal; }                     /* no italic anywhere */
 <section id="working-papers">
   <div class="container">
     <span class="section-label">Working Papers</span>
-    <h2>Working <em>Papers</em></h2>
+    <h2>Working Papers</h2>
 
     <ul class="papers">
        <li class="paper">
@@ -626,23 +694,19 @@ em, i { font-style: normal; }                     /* no italic anywhere */
         <p class="paper-meta">Working paper · 2025</p>
         <p class="paper-abstract">
           Anti-poverty programs can alter conflict dynamics, but their effects may depend on local political conditions. This paper examines whether political 
-          alignment between local representatives and the ruling state government changes the security consequences of India’s National Rural Employment 
+          alignment between local representatives and the ruling state government changes the security consequences of India's National Rural Employment 
           Guarantee Act (NREGA). Using a difference-in-discontinuities design that combines close state assembly elections with the phased rollout of NREGA, 
           I estimate the additional effect of political alignment on violence when the program is operational. I show that in Naxalite-affected areas, 
           aligned constituencies in NREGA districts experience more violence, especially clashes between state forces and rebels. The evidence is consistent 
-          with more effective program implementation in aligned constituencies, strengthening the state’s local reach and threatening insurgents’ recruitment 
-          base and territorial control, thereby prompting escalation. By contrast, I find no clear evidence of a comparable effect in Northeast India’s ethnic 
+          with more effective program implementation in aligned constituencies, strengthening the state's local reach and threatening insurgents' recruitment 
+          base and territorial control, thereby prompting escalation. By contrast, I find no clear evidence of a comparable effect in Northeast India's ethnic 
           insurgencies, where mobilization is less tied to short-run economic deprivation. The results show that political alignment changes the security 
           consequences of NREGA, and that these consequences depend on the structure of the underlying conflict.
         </p>
         <div class="paper-links">
           <a href="https://drive.google.com/file/d/1AM5j8a0Vp_6rpaX7HxoEHieUg6-uSri7/view?usp=sharing">Download PDF</a>
-          <a href="#"></a>
         </div>
       </li>
-
-     
-
     </ul>
   </div>
 </section>
@@ -651,7 +715,6 @@ em, i { font-style: normal; }                     /* no italic anywhere */
 <section id="teaching">
   <div class="container">
     <span class="section-label">Teaching</span>
-    <h2>Teaching</h2>
 
     <p class="teaching-prize">
       <strong>PhD Teaching Assistant Excellence Prize</strong> — Department of Economics, University of Calgary (2022–2023)
@@ -718,7 +781,7 @@ em, i { font-style: normal; }                     /* no italic anywhere */
 <section id="awards">
   <div class="container">
     <span class="section-label">Awards &amp; Honors</span>
-    <h2>Awards <em>&amp; Honors</em></h2>
+    <h2>Awards &amp; Honors</h2>
 
     <ul class="list">
       <li>
@@ -744,7 +807,6 @@ em, i { font-style: normal; }                     /* no italic anywhere */
   <div class="container">
     <span class="section-label">Curriculum Vitae</span>
     
-    
     <p style="font-family: var(--sans); font-size: 13px; text-transform: uppercase; letter-spacing: 0.12em;">
       <a href="https://drive.google.com/file/d/13eAwMFDnUA9CNe03TS-Oo5Pr93Z1_4b1/view?usp=drive_link" style="color: var(--accent); border-bottom: 1px solid var(--accent); padding-bottom: 2px; text-decoration: none;">
         Download CV (PDF)
@@ -757,7 +819,6 @@ em, i { font-style: normal; }                     /* no italic anywhere */
 <section id="references">
   <div class="container">
     <span class="section-label">References</span>
-    
 
     <div class="references">
       <div class="ref-card">
@@ -775,11 +836,11 @@ em, i { font-style: normal; }                     /* no italic anywhere */
     </div>
   </div>
 </section>
+
 <!-- ============== CONTACT ============== -->
 <section id="contact">
   <div class="container">
     <span class="section-label">Contact</span>
-    
 
     <div class="contact-grid">
       <div>
@@ -792,12 +853,10 @@ em, i { font-style: normal; }                     /* no italic anywhere */
         SS-405, Department of Economics<br/>
         University of Calgary
       </div>
-      
       <div>
         <span>LinkedIn</span>
         <a href="https://www.linkedin.com/in/aashay-tripathi-518b2874/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
-      
     </div>
   </div>
 </section>
